@@ -1,4 +1,6 @@
 IssueSolver::Application.routes.draw do
+  resources :issue_solvers
+  match "/get_issue_from_id" => "issue_solvers#get_issue_from_id"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
