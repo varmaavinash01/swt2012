@@ -1,0 +1,94 @@
+  <div style="height: 100px"></div>
+  
+    <br><h2><span style="color: black;">New Issues : </span></h2>
+    <%  @issues.each do |issue| %>
+      <% if issue['status'] == "Open"%>
+      <div class="steps-box" style="border: 1px solid #CCCCCC;padding: 10px;">
+        <div style="line-height:100%;">
+          <span style="color: #8b1d20;">Issue # : </span><%= issue['id']%> <br><br>
+          <span style="color: #8b1d20;">Title : </span><%= issue['title']%> <br><br>
+          <span style="color: #8b1d20;">Description : </span><%= issue['description']%> <br><br>
+          <span style="color: #8b1d20;">Status : </span><span ><span id="status-<%= issue['id']%>"><%= issue['status']%> </span><br><br>
+          <span style="color: #8b1d20;">Vote Counts : </span><%= issue['voteCount']%> <br><br>      
+            <div id="<%= issue['id'] %>" class="start" value="01">
+              <a href="javascript:void(false);" class="registerButton" value="">Start</a>
+            </div>
+        </div>
+      </div>
+    <% end %>    
+    <% end %>
+    
+    
+     <br><h2><span style="color: black;">In Progress Issues : </span></h2><br>
+    <%  @issues.each do |issue| %>
+      <% if issue['status'] == "In Progress" %>
+      <div class="steps-box" style="border: 1px solid #CCCCCC;padding:10px;">
+        <div style="line-height:100%;">
+          <span style="color: #8b1d20;">Issue # : </span><%= issue['id']%> <br><br>
+          <span style="color: #8b1d20;">Title : </span><%= issue['title']%> <br><br>
+          <span style="color: #8b1d20;">Description : </span><%= issue['description']%> <br><br>
+          <span style="color: #8b1d20;">Status : </span><span id="status-<%= issue['id']%>"><%= issue['status']%> </span><br><br>
+          <span style="color: #8b1d20;">Vote Counts : </span><%= issue['voteCount']%> <br><br>  
+          <div id="done-<%= issue['id']%>" style="" class="done">
+            <a href="javascript:void(false);" class="registerButton" value="">Done !</a>
+          </div>
+        </div>
+      </div>  
+    <% end %>
+    <% end %>
+    
+     <br><span style="color: black;"><h2><span style="color: black;">Completed Issues :</span></style> </h2><br><br>
+    <%  @issues.each do |issue| %>
+      <% if issue['status'] == "Solved" %>
+      <div class="steps-box" style="border: 1px solid #CCCCCC;padding: 10px;">
+        <div style="line-height:100%;">
+          <span style="color: #8b1d20;">Issue # : </span><%= issue['id']%> <br><br>
+          <span style="color: #8b1d20;">Title : </span><%= issue['title']%> <br><br>
+          <span style="color: #8b1d20;">Description : </span><%= issue['description']%> <br><br>
+          <span id ="status-<%= issue['id'] %>" style="color: #8b1d20;">Status : </span><%= issue['status']%> <br><br>
+          <span style="color: #8b1d20;">Vote Counts : </span><%= issue['voteCount']%> <br><br>
+        </div>
+      </div>  
+    <% end %>
+    <% end %>
+    <div style="height: 100px;">
+    </div >
+    
+    
+        
+  <script>
+    $(".start").click(function(){
+      console.log("in progress called"); 
+      id =  $(this).attr('id');    
+      $.ajax({ 
+             type: "GET",
+             url: "/start/" + $(this).attr('id'),
+             data: {}
+      }).done(function(mesg){
+        $("#" + id).css('display', 'none');
+        $("#status-" + id).html("In progress");
+        console.log("in progress executed");
+      });
+      
+    });
+    
+    $(".done").click(function(){
+      console.log("done called");
+      id = $(this).attr('id').replace('done-','');
+      $.ajax({
+             type: "GET" ,
+             url: "/done/" + id,
+             data: {}
+      }).done(function(mesg){
+        $("#done-" + id).css('display', 'none');
+        $("#status-" + id ).html("Done");
+        console.log("done executed");
+      });
+    
+    });  
+     
+  </script>
+       
+
+
+

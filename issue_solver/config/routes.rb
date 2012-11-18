@@ -1,6 +1,10 @@
 IssueSolver::Application.routes.draw do
   resources :issue_solvers
-  match "/get_issue_from_id" => "issue_solvers#get_issue_from_id"
+  match "/get_issue_from_id/:id" => "issue_solvers#get_issue_from_id"
+  match "/taskview" => "tasks_views#index"
+  match "/upvote/:id" => "issue_solvers#upvote"
+  match "/start/:id" => "issue_solvers#start"
+  match "/done/:id" => "issue_solvers#done"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

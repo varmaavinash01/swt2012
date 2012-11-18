@@ -6,17 +6,18 @@ class Issue
       issues = []
       keys.each do |key|
         Rails.logger.info "Key is " + key
-        issues.push(REDIS.get(key))
+        issues.push(JSON.parse((REDIS.get(key))))
       end
       return issues
     end
 
     def save(params)
       Rails.logger.info "in save" + params.inspect
-      key    = "swt2012-" + params[:id]
+      id = inclease_count
+      key    = "swt2012-" + id
       issue = {}
         
-      issue["id"] = params[:id]
+      issue["id"] = id
       issue["title"] = params[:title]
       issue["description"] = params[:description]
       issue["location"] = params[:location]
@@ -50,6 +51,16 @@ class Issue
       REDIS.set(key, issue)
     end
 
+    def inclease_count 
+      id = REDIS.get("issue-count").to_i
+      unless id
+        REDIS.set("issue-count", "0")
+      end
+      id +=1
+      REDIS.set("issue-count", id)
+      id.to_s
+    end
+    
     def create_key(options)
       Rails.logger.info "create_key " + options[:issueId]
       if options[:issueId]

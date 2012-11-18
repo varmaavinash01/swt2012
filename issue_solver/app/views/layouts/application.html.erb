@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>IssueSolver</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>WeAllCare</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+ <!-- Fixme. Bad remove following code -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <!-- <script src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script> -->
+    <%= csrf_meta_tags %>
+  </head>
+  <body class="index">
+    <div style="margin-bottom:5%;z-index: 1;width:100%;position:fixed;">
+      <div class="header-bar">
+        <h2><a class="link-to-text" href="http://www.avivarma.com:3030/tasklist">We All Care</h2>
+        <div class="header-text">
+          
+        </div>
+      </div>
+    </div>
 
-<%= yield %>
+    <%= yield %>
 
-</body>
+  </body>
 </html>

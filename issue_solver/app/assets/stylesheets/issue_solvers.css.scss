@@ -1,3 +1,276 @@
-// Place all the styles related to the issue_solvers controller here.
+// Place all the styles related to the comingsoon controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.preview {
+  background-color: #eeeeee;
+}
+
+.index {
+  #background-color: #ffffff;
+}
+
+body {
+  border-top: 1px solid #666;
+  color: #3F3F38;
+  font-family: Helvetica;
+  font-size: 17px;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0px 0 50px 0;
+  background:#FFFFFF;
+
+}
+
+.impression-box {
+  -moz-appearance: none;
+  -moz-box-sizing: border-box;
+  -webkit-transition: border linear 0.5s, box-shadow linear 0.5s;
+  border: 1px solid #EBEBEB;
+  border-radius: 3px 3px 3px 3px;
+  color: #666;
+  font : 16px cronos-pro, Georgia, serif;
+  padding: 5px 5px;
+  margin: 10px 0;
+}
+
+.impression-box:focus {
+  border-color: #0081cc !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px
+    rgba(0, 129, 204, 0.6);
+  outline: 0 none;
+
+}
+
+.mr-mood {
+margin-top:100px;
+margin-left: 55%;
+position: fixed;
+}
+
+.mr-mood-img {
+#background: black;
+width: 60px;
+height: 60px;
+margin-left: 32%;
+margin-right: 40%;
+}
+
+.mr-mood-mesg {
+padding: 5px;
+
+}
+.mr-logo {
+
+margin: 20px;
+padding: 15px;
+border-bottom: 2px solid #EBEBEB;
+width:80%;
+}
+
+.logo {
+
+  margin-left: 35%;
+  margin-right: 30%;
+  margin-top: 60px;
+}
+
+.mr-message {
+  position: absolute;
+  width: 500px;
+  margin: 20px;
+  margin-top: 5%;
+}
+
+
+.mail_text_box {
+  -moz-appearance: none;
+  -moz-box-sizing: border-box;
+  #border: 1px solid #8B1D20;
+  border:none;
+  border-radius: 3px 3px 3px 3px;
+  color: #8B1D20;
+  font : 16px cronos-pro, Georgia, serif;
+  #padding: 5px 5px;
+  resize: none;
+  width: 265px;
+
+}
+
+.mail_text_box:focus {
+  border-color: #D60718 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px
+    rgba(139, 29, 32, 0.6);
+  outline: 0 none;
+
+}
+
+.links {
+float:right;
+margin-top: 25%;
+margin-right: 100px;
+font: 14px cronos-pro, Georgia, serif;
+}
+
+.footer {
+border-top: 4px solid #8B1D20;
+#width:300px;
+height:50px;
+margin-left:100px;
+margin-right:100px;
+margin-top:600px;
+}
+
+.registerButton {
+  background-color: #686868;
+  height: 35px;
+  box-shadow:   1px 1px 10px #CCCCCC;
+  color: #FFFFFF;
+  cursor: pointer;
+  outline: medium none;
+  padding: 4px 20px;
+  text-decoration: none;
+  border: none;
+  min-width:175px;
+  margin: 5px;
+}
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Geneva,Helvetica,"Helvetica Neue",Arial,sans-serif;
+      color: #333333;
+    }
+
+    h2 {
+      font-family: Geneva,Helvetica,"Helvetica Neue",Arial,sans-serif;
+      color: #333333;
+      display: inline;
+    }
+    .header-bar {
+    background-color: #222222;
+    height: 60px;
+    }
+    .header-text {
+      float: right;
+      margin-right: 5%;
+      margin-top: 0px;
+      margin-top: -3px;
+    }
+
+    .header-text a {
+      text-decoration: none;
+      background-color: transparent;
+      color: white;
+      display: block;
+      font-size: 18px;
+      line-height: 62px;
+      padding: 0 10px;
+      text-shadow: 0 -1px 0 black;
+      display: inline;
+      margin-top: -5px;
+    }
+
+    h2 {
+      text-decoration: none;
+      background-color: transparent;
+      color: white;
+      font: 26px/34px "Nexa";
+      display: block;
+      line-height: 70px;
+      padding: 0 10px;
+      text-shadow: 0 -1px 0 black;
+      display: inline;
+      #margin-top: -5px;
+    }
+
+    .tag-line {
+      position: relative;
+      margin-top: 15%;
+      margin-left: 20%;
+      margin-right: 20%;
+      text-align: center;
+
+    }
+
+    .steps-box {
+     margin-left: 1%;
+     margin-right: 1%;
+     #position: relative;
+     margin-top: 1%;
+     height: auto;
+    }
+    .steps-box img {
+      display: inline;
+      margin-left: 7%;
+      margin-right: 7%;
+    }
+
+    .step-desc {
+      margin-left: 15%;
+      margin-right: 20%;
+      #position: relative;
+      margin-top: 1%;
+      height: 200px;
+      color: #666666;
+      display: inline;
+      font: 22px/30px "Nexa";
+    }
+
+    .steps-text {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    .done {
+      #position: absolute;
+      margin-top: -5%;
+      float: right;
+      margin-right:10%;
+    }
+
+    .start-button {
+      text-align: center;
+      background-color: #222222;
+      height: 45px;
+      color: white;
+      cursor: pointer;
+      outline: medium none;
+      padding: 4px 20px;
+      text-decoration: none;
+      border: none;
+      width:250px;
+    }
+
+    .button-wrapper {
+      margin-left: 45%;
+      margin-right: 45%;
+      height: 100px;
+      widht: 100px;
+      margin-top: 10%;
+    }
+
+
+    .fixed-box {
+      position: fixed;
+      margin-top:18%;
+      margin-left: 75%;
+    }
+
+    .link-to-text {
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    .reminder-box {
+      margin-top: 5%;
+      margin-left: 60%;
+      line-height: 185%;
+    }
+    
+    .email-box {
+      height: 26px;
+      padding: 1px;
+      width: 240px;
+    }
